@@ -1,4 +1,4 @@
-<category name="ML4Kids" colour="#4a4b5f" css-icon="customIcon fad fa-pencil">
+<category name="ML4Kids" colour="#4a4b5f" css-icon="customIcon fad fa-head-side-brain">
     <label text="Machine Learning For Kids"></label>
 
     <block type="import_mlmodel"></block>
