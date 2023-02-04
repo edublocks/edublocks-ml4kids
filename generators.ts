@@ -1,10 +1,10 @@
 Blockly.Python["import_mlmodel"] = function() {
-    const code = `import mlmodel\n`;
+    const code = `from mlmodel import *\n`;
     return code;
 };
 
 Blockly.Python["import_mltext"] = function() {
-    const code = `import mltext\n`;
+    const code = `from mltext import *\n`;
     return code;
 };
 
