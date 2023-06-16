@@ -71,4 +71,6 @@
             </shadow>
         </value>
     </block>
+
+    <block type="test_result_output"></block>
 </category>  

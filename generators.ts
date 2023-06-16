@@ -33,3 +33,11 @@ Blockly.Python['train_model'] = function(block) {
     const code = `trainModel(${parameters})\n`;
     return code;
 };
+
+Blockly.Python['test_result_output'] = function(block) {
+    const result = Blockly.Python.nameDB_.getName(block.getFieldValue('result'), Blockly.VARIABLE_CATEGORY_NAME);
+    const key = block.getFieldValue('key');
+    var code = `${result}["${key}"]`;
+    return [code, 0];
+};
+  

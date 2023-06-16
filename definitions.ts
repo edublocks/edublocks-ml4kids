@@ -82,3 +82,15 @@ Blockly.Blocks['train_model'] = {
     }
 };
   
+Blockly.Blocks['test_result_output'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField(new Blockly.FieldVariable("result"), "result")
+          .appendField("[\"")
+          .appendField(new Blockly.FieldDropdown([["class_name","class_name"], ["confidence","confidence"]]), "key")
+          .appendField("\"]");
+      this.setOutput(true, null);
+      this.setColour(ml4kidsColor);
+    }
+};
+  
