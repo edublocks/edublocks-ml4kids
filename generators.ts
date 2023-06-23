@@ -8,6 +8,11 @@ Blockly.Python["import_mltext"] = function() {
     return code;
 };
 
+Blockly.Python["import_mlnumbers"] = function() {
+    const code = `from mlnumbers import *\n`;
+    return code;
+};
+
 Blockly.Python['check_model'] = function(block) {
     const status = Blockly.Python.nameDB_.getName(block.getFieldValue("status"), Blockly.VARIABLE_CATEGORY_NAME);
     const parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
@@ -27,6 +32,20 @@ Blockly.Python['store_text'] = function(block) {
     const code = `storeText(${parameters})\n`;
     return code;
 };
+
+Blockly.Python['classify_numbers'] = function(block) {
+    const result = Blockly.Python.nameDB_.getName(block.getFieldValue("result"), Blockly.VARIABLE_CATEGORY_NAME);
+    const parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
+    const code = `${result} = classifyNumbers(${parameters})\n`;
+    return code;
+};
+
+Blockly.Python['store_numbers'] = function(block) {
+    const parameters = Blockly.Python.valueToCode(block, 'parameters', 0);
+    const code = `storeNumbers(${parameters})\n`;
+    return code;
+};
+
 
 Blockly.Python['train_model'] = function(block) {
     const parameters = Blockly.Python.valueToCode(block, 'parameters', 0);

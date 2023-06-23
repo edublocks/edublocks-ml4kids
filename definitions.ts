@@ -20,6 +20,16 @@ Blockly.Blocks["import_mltext"] = {
     },
 };
 
+Blockly.Blocks["import_mlnumbers"] = {
+    init: function() {
+        this.appendDummyInput()
+            .appendField("from mlnumbers import *");
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(ml4kidsColor);
+    },
+};
+
 Blockly.Blocks['check_model'] = {
     init: function() {
       this.appendDummyInput()
@@ -56,6 +66,37 @@ Blockly.Blocks['store_text'] = {
     init: function() {
       this.appendDummyInput()
           .appendField("storeText(");
+      this.appendValueInput("parameters")
+          .setCheck(null);
+      this.appendDummyInput()
+          .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(ml4kidsColor);
+    }
+};
+
+Blockly.Blocks['classify_numbers'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField(new Blockly.FieldVariable("result"), "result")
+          .appendField(" = classifyNumbers(");
+      this.appendValueInput("parameters")
+          .setCheck(null);
+      this.appendDummyInput()
+          .appendField(")");
+      this.setInputsInline(true);
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(ml4kidsColor);
+    }
+};
+
+Blockly.Blocks['store_numbers'] = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField("storeNumbers(");
       this.appendValueInput("parameters")
           .setCheck(null);
       this.appendDummyInput()
