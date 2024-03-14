@@ -1,4 +1,7 @@
-# This file was created by https://machinelearningforkids.co.uk/ 
+# This file was created by https://machinelearningforkids.co.uk/
+
+from mlmodel import checkApiKey
+import requests
 
 def classifyNumbers(key, data):
   checkApiKey(key)
