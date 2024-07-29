@@ -1,4 +1,5 @@
 # This file was created by https://machinelearningforkids.co.uk/ 
+from mlmodel import checkApiKey
 
 #
 # This function will pass your text to the machine learning model
